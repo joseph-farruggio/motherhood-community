@@ -1,0 +1,49 @@
+{
+    "key": "group_5de9c1bc2a7a2",
+    "title": "Don't Show in Homepage",
+    "fields": [
+        {
+            "key": "field_5de9c0e7250fd",
+            "label": "Select this option if you don't want to show this post on the home page after publishing updates",
+            "name": "dont_show_in_homepage",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680762647,
+    "wpml_field_group_language": "en",
+    "local_file": "\/www\/motherhoodcommunity_960\/public\/wp-content\/themes\/motherhoodcommunity\/acf-json\/en\/group_5de9c1bc2a7a2.json",
+    "acfml_field_group_mode": "advanced"
+}

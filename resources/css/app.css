@@ -1,0 +1,36 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* @import "maxmegamenu.css"; */
+@import "custom.css";
+
+@screen lg {
+    .menu-has-columns .column-wrapper{
+        /* @apply w-full !important;
+        column-count: 2;
+        column-gap: 2rem; */
+    }
+    
+    .menu-has-columns .column-wrapper > a {    
+        inline-size: 150px;
+        overflow-wrap: break-word;
+    }
+    
+    .menu-has-columns.menu-columns-3 {
+        min-width: 500px !important;
+    }
+    .menu-has-columns.menu-columns-3 .column-wrapper {
+        column-count: 3;
+    }
+    
+    .menu-has-columns.menu-columns-4 .column-wrapper {
+        @apply mx-auto grid max-w-7xl grid-cols-1 gap-2 px-6 py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:py-10 lg:grid-cols-4 lg:gap-4 lg:px-8 xl:gap-8;
+    }
+}
+
+/* GForms */
+/* @import "formreset.min.css";
+@import "formsmain.min.css";
+@import "readyclass.min.css"; */
+/* @import "browsers.min.css"; */

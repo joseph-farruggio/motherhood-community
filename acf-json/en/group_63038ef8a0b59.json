@@ -1,0 +1,72 @@
+{
+    "key": "group_63038ef8a0b59",
+    "title": "[Block] Sidebar Category",
+    "fields": [
+        {
+            "key": "field_63038f12af28e",
+            "label": "Heading",
+            "name": "heading_scb",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "(Leave empty if you want to display category name here)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63038f5faf28f",
+            "label": "Number of Posts",
+            "name": "nop_scb",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "wpml_cf_preferences": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/sidebar-category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680762647,
+    "wpml_field_group_language": "en",
+    "local_file": "\/www\/motherhoodcommunity_960\/public\/wp-content\/themes\/motherhoodcommunity\/acf-json\/en\/group_63038ef8a0b59.json",
+    "acfml_field_group_mode": "advanced"
+}

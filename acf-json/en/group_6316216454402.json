@@ -1,0 +1,70 @@
+{
+    "key": "group_6316216454402",
+    "title": "[Block] Sidebar TOC",
+    "fields": [
+        {
+            "key": "field_6316218c2c032",
+            "label": "Title",
+            "name": "title_stocb",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_631621a92c033",
+            "label": "Shortcode",
+            "name": "shortcode_stocb",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/sidebar-toc"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1680762647,
+    "wpml_field_group_language": "en",
+    "local_file": "\/www\/motherhoodcommunity_960\/public\/wp-content\/themes\/motherhoodcommunity\/acf-json\/en\/group_6316216454402.json",
+    "acfml_field_group_mode": "advanced"
+}

@@ -1,0 +1,674 @@
+@font-face {
+    font-family: 'GothamBook';
+    font-display: swap;
+    src: url('../fonts/GothamBook.eot');
+    src: url('../fonts/GothamBook.eot') format('embedded-opentype'),
+         url('../fonts/GothamBook.woff2') format('woff2'),
+         url('../fonts/GothamBook.woff') format('woff'),
+         url('../fonts/GothamBook.ttf') format('truetype'),
+         url('../fonts/GothamBook.svg#GothamBook') format('svg');
+}
+@font-face {
+    font-family: 'GothamBold';
+    font-display: swap;
+    src: url('../fonts/gotham-bold.eot');
+    src: url('../fonts/gotham-bold.eot') format('embedded-opentype'),
+         url('../fonts/gotham-bold.woff2') format('woff2'),
+         url('../fonts/gotham-bold.woff') format('woff'),
+         url('../fonts/gotham-bold.ttf') format('truetype'),
+         url('../fonts/gotham-bold.svg#GothamBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamMedium';
+    font-display: swap;
+    src: url('../fonts/GothamMedium.eot');
+    src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
+         url('../fonts/GothamMedium.woff2') format('woff2'),
+         url('../fonts/GothamMedium.woff') format('woff'),
+         url('../fonts/GothamMedium.ttf') format('truetype'),
+         url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+}
+@font-face {
+    font-family: 'GothamLight';
+    font-display: swap;
+    src: url('../fonts/GothamLight.eot');
+    src: url('../fonts/GothamLight.eot') format('embedded-opentype'),
+         url('../fonts/GothamLight.woff2') format('woff2'),
+         url('../fonts/GothamLight.woff') format('woff'),
+         url('../fonts/GothamLight.ttf') format('truetype'),
+         url('../fonts/GothamLight.svg#GothamLight') format('svg');
+}
+
+@font-face {
+    font-family: 'CormorantGaramondMedium';
+    font-display: swap;
+    src: url('../fonts/cormorantgaramond-medium-webfont.woff2');
+    src: url('../fonts/cormorantgaramond-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cormorantgaramond-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-display: swap;
+    src: url('../fonts/Avenir.eot');
+    src: url('../fonts/Avenir.eot') format('embedded-opentype'),
+         url('../fonts/Avenir.woff2') format('woff2'),
+         url('../fonts/Avenir.woff') format('woff'),
+         url('../fonts/Avenir.ttf') format('ttf'),
+         url('../fonts/Avenir.svg') format('svg');
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    -wrap: normal !important;
+}
+
+body {
+    > .a2a_kit_size_32 {
+        @apply !p-0;
+
+        > a {
+            @apply !p-0 !rounded-none;
+
+            > span.a2a_svg {
+                @apply !rounded-none !p-1 w-10 h-10 leading-10;
+            }
+
+            &.a2a_button_email {
+                > span.a2a_svg {
+                    @apply !bg-[#767676];
+                }
+            }
+            &.a2a_button_sms {
+                > span.a2a_svg {
+                    @apply !bg-[#bbbbbb];
+                }
+            }
+        }
+    }
+}
+
+iframe {
+    @apply !max-w-full;
+}
+
+#site-header {
+    > #search-form {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transition: transform 0.4s;
+    }
+
+    &.hide-form {
+        > #search-form {
+            transform: translate3d(0, -100%, 0);
+        }
+    }
+}
+
+ul.alphabet-sticky:before {
+    content: 'Starts with: ';
+    transform: translate(-100%, 3px);
+    position: absolute;
+    text-transform: none;
+}
+
+.scroll-down #site-header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .alphabet-sticky {
+    @apply !top-[62px] md:!top-[110px];
+}
+.scroll-up .alphabet-sticky-toggle {
+    @apply !top-[62px];
+}
+.alphabet-sticky.open-sidemenu {
+    @apply translate-x-0;
+}
+
+#mega-menu-wrap-primary {
+    .mega-menu-toggle {
+        @apply absolute -top-[50px] left-0;
+    }
+    ul {
+        > li > a {
+            @apply !uppercase !font-g-book !text-xs !text-[#353535] !tracking-[1.57px];
+        }
+        > li.mega-menu-item-has-children > a {
+            @apply !text-sm	!font-bold;
+        }
+    }
+    > ul > li a {
+        @apply !text-sm	!font-bold;
+    }
+}
+
+article > *:not(.entry-content),
+.entry-content > * {
+    @apply mx-auto max-w-content;
+}
+
+.entry-content, .block-editor-block-list__layout {
+    h1 {
+        @apply font-cg-medium text-3xl md:text-6xl text-[#161616] mb-8;
+    }
+
+    h2 {
+        @apply font-cg-medium font-medium text-[1.875rem] md:text-[3.125rem] leading-[1.875rem] md:leading-[3.125rem] text-black mb-6 md:mb-10 -tracking-[0.116rem];
+    }
+
+    h3 {
+        @apply font-cg-medium text-[1.625rem] md:text-[2.5rem] leading-[1.625rem] md:leading-[2.5rem] mb-5 md:mb-8;
+    }
+
+    h4 {
+        @apply font-avenir font-bold text-[1.75rem] leading-[1.75rem] mb-[1.375rem];
+    }
+
+    h5 {
+        @apply font-cg-medium font-normal text-[1.75rem] leading-[1em] mb-[1.375rem];
+    }
+
+    h6 {
+        @apply text-xl font-bold font-avenir mb-4 -tracking-[.02rem];
+    }
+
+    p, ul, ol {
+        @apply font-g-book font-light break-words text-base md:text-lg mb-4 text-[#161616];
+
+        a {
+            @apply border-b-2 border-[#28bed7] text-[#28bed7] no-underline;
+        }
+
+        strong {
+            @apply underline font-bold;
+        }
+        b {
+            @apply font-bold;
+        }
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        @apply ml-5 mb-4;
+
+        li {
+            @apply relative pl-8 text-base md:text-lg my-3 before:content-[''] before:w-2.5 before:h-2.5 before:absolute before:top-[6px] before:left-0 before:rounded-full before:bg-black;
+        }
+    }
+
+    ol {
+        @apply pl-8;
+
+        li {
+            @apply list-decimal list-outside;
+        }
+    }
+
+    img {
+        @apply my-[1.625rem];
+    }
+
+    .wp-block-quote, blockquote {
+        @apply bg-[#28bed7]/[10%] py-5 md:py-10 px-[2.813rem] md:px-[5.625rem] my-10 border-0 relative;
+
+        &::before {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"/></svg>');
+            @apply absolute top-5 md:top-10 left-[5px] md:left-10;
+        }
+
+        p {
+            @apply font-cg-medium text-[#353535] text-xl md:text-[1.313rem] md:leading-[2.1rem];
+
+            strong {
+                @apply no-underline;
+            }
+        }
+
+        p.h7 {
+            @apply font-g-medium text-sm;
+        }
+    }
+
+    > figure {
+        @apply !w-full text-center;
+
+        img {
+            @apply mx-auto;
+        }
+        figcaption {
+            @apply my-[1.3em] font-avenir text-sm block text-[#666];
+        }
+    }
+
+    a:hover {
+        @apply text-[#28bed7];
+    }
+}
+
+article{
+    h1, h2, h3, h4, h5, h6{
+        margin-top: 1.3em;
+    }
+}
+
+aside.sidebar {
+    .widget_block {
+        @apply overflow-hidden;
+        .widgettitle {
+            @apply border-b border-[#e6e6e6];
+        }
+        .menu {
+            @apply !hidden h-0 opacity-0 transition-all !bg-transparent !border-0 !p-0 !m-0;
+        }
+
+        &.active {
+            .widgettitle {
+                @apply border-0;
+
+                > svg {
+                    @apply rotate-180;
+                }
+            }
+
+            .menu {
+                @apply !block h-full opacity-100;
+            }
+        }
+    }
+
+    .sidebar-toc {
+        #ez-toc-container {
+            .ez-toc-title-container {
+                @apply hidden;
+            }
+
+            ul {
+                @apply !block;
+
+                li {
+                    @apply px-2 border-b border-[#e6e6e6] block;
+
+                    a {
+                        @apply py-2.5 text-black capitalize text-sm font-g-book block hover:text-[#28bed7];
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mhc-card, .compare-product-cards {
+    table tbody > tr:nth-child(odd) {
+        @apply bg-[#f8f8f8];
+    }
+}
+
+.compare-product-cards {
+    .brand-name {
+        @apply text-[13px] h-[80px] mb-[30px] leading-[17px] font-g-medium;
+    }
+    .btn {
+        @apply bg-secondary px-6 text-white border-2 border-secondary rounded-md text-base font-g-medium inline-block mx-auto;
+    }
+}
+
+.meta-share {
+    .addtoany_list.a2a_kit_size_32 a {
+        @apply h-[30px] sm:h-[42px] text-white relative font-g-book text-sm;
+    
+        &:not(.addtoany_special_service) > span {
+            @apply leading-[30px] sm:leading-[42px] h-[30px] sm:h-[42px] w-[85px] rounded-none;
+        }
+    
+        &:after {
+            content: '';
+            position: absolute;
+            left: 38px;
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            font-size: 13px;
+        }
+        &.a2a_button_facebook::after {
+            content: "Share";
+        }
+        &.a2a_button_twitter::after {
+            content: "Tweet";
+        }
+        &.a2a_button_pinterest::after {
+            content: "Pin It";
+        }
+        &.a2a_button_email {
+            &:after {
+                content: "Email";
+            }
+
+            > span.a2a_svg {
+                @apply !bg-[#767676];
+            }
+        }
+        &.a2a_button_sms {
+            &:after {
+                content: "Text";
+            }
+
+            > span.a2a_svg {
+                @apply !bg-[#bbbbbb];
+            }
+        }
+    
+        .a2a_svg svg {
+            width: 19px;
+            margin-left: 10px;
+            @apply h-[30px] sm:h-[42px];
+        }
+
+        &:nth-last-of-type(-n+2) {
+            @apply hidden sm:inline-block;
+        }
+    }
+}
+/* .addtoany_list.a2a_kit_size_32 a:not(.addtoany_special_service) > span {
+    height: 42px;
+    line-height: 42px;
+    width: 85px;
+    border-radius: 0;
+}
+.addtoany_list.a2a_kit_size_32 a:after {
+    content: "Share";
+    position: absolute;
+    left: 38px;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font-size: 13px;
+}
+.addtoany_list.a2a_kit_size_32 .a2a_svg svg {
+    width: 19px;
+    height: 42px;
+    margin-left: 10px;
+} */
+
+.splide {
+
+    .splide__slide .block {
+        img {
+            @apply w-full;
+        }
+    }
+
+    .splide__pagination {
+        @apply relative py-[1.125rem] mt-[1.125rem] border-y border-[#eaeaea];
+
+        .splide__pagination__page {
+            @apply w-2.5 h-2.5;
+
+            &.is-active {
+                @apply bg-black w-2.5 h-2.5 scale-100;
+            }
+        }
+    }
+}
+
+.swiper-slide {
+    height: calc((100% - 30px) / 2);
+}
+
+.archive-header {
+    .archive-description p {
+        @apply text-sm text-[#444444];
+
+        a {
+            @apply border-b-2 border-[#28bed7] text-[#28bed7] no-underline;
+        }
+    }
+}
+
+#comments {
+	@apply p-8 shadow-xl;
+
+	a {
+		@apply text-blue-500 underline;
+
+		&:hover {
+			@apply no-underline;
+		}
+	}
+
+	p {
+		@apply mt-2;
+	}
+
+	label:not([for=wp-comment-cookies-consent]) {
+		@apply block font-medium;
+	}
+
+	#reply-title {
+        @apply text-3xl font-avenir font-semibold mb-2;
+	}
+
+	input:not([type=submit]):not([type=checkbox]) {
+        @apply bg-gray-200 w-full py-2 px-3;
+	}
+}
+
+form#gform_4 {
+    ul.gform_fields {
+        @apply list-none m-0 p-0;
+
+        > li {
+            @apply pl-0 text-[#666666] text-sm font-avenir;
+
+            &::before {
+                content: none !important;
+            }
+
+            > label {
+                @apply hidden;
+            }
+
+            input, textarea {
+                @apply px-5 py-0 border border-[#979797]/[.3] text-[#666666] text-sm font-avenir mt-0;
+            }
+            input:not([type="checkbox"]) {
+                @apply h-[55px] w-full;
+            }
+            textarea {
+                @apply p-[15px];
+            }
+        }
+    }
+
+    .gform_footer {
+        @apply !pt-0;
+
+        input[type=submit] {
+            @apply ml-auto px-5 text-sm bg-black hover:bg-transparent text-white hover:text-black h-[55px] block cursor-pointer border border-black hover:border-secondary uppercase;
+        }
+    }
+}
+
+#sponsor-sidebar {
+
+    .signup {
+        @apply font-g-book text-lg font-light text-[#161616];
+
+        h3 {
+            @apply text-black font-cg-medium text-[2.5rem] leading-[1.2em] mb-2;
+        }
+    
+        .gform_legacy_markup_wrapper {
+            @apply mb-0;
+        }
+    
+        #gform_10 {
+            .gform_body {
+    
+                label {
+                    @apply hidden;
+                }
+        
+                input {
+                    @apply w-full h-12 px-5 text-sm outline-0 border;
+                }
+            }
+    
+            .gform_footer {
+                input[type=submit] {
+                    @apply w-full h-12 text-sm font-semibold text-center border border-black bg-black text-white uppercase hover:border-secondary hover:bg-white hover:text-black cursor-pointer;
+                }
+            }
+        }
+    }
+
+}
+
+.signup-block {
+    form {
+        @apply flex flex-row flex-wrap grow justify-end;
+
+        .gform_body {
+            @apply w-full md:w-4/5;
+
+
+            ul.gform_fields {
+                @apply flex flex-col md:flex-row flex-wrap grow w-full space-y-2 md:space-y-0;
+
+                li.gfield {
+                    @apply w-full md:w-1/2 mt-0;
+
+                    label {
+                        @apply hidden;
+                    }
+            
+                    div.ginput_container {
+                        @apply mt-0;
+
+                        input {
+                            @apply w-full !h-12 !px-5 text-sm outline-0 border;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gform_footer {
+            @apply w-full mt-2 md:w-1/5 p-0 md:mt-0;
+
+            input[type=submit] {
+                @apply w-full !h-12 text-sm font-semibold text-center border border-black bg-black text-white uppercase hover:border-secondary hover:bg-white hover:text-black cursor-pointer;
+            }
+        }
+    }
+}
+
+.stories-section {
+    .content {
+        h2 {
+            max-height: 110px;
+            min-height: 110px;
+            overflow: hidden;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .tags_posts {
+        transition: 0.5s all ease;
+        overflow: hidden;
+        &.hidden-anm {
+            margin: 100%;
+        }
+    }
+
+    #filterTags {
+        .active {
+            @apply bg-secondary;
+        }
+    }
+    #filterTags2 {
+        .active {
+            @apply text-secondary;
+        }
+    }
+}
+
+.related-posts, .grid5-posts {
+    .card img {
+        @apply h-full md:h-auto object-cover md:w-auto w-full;
+    }
+}
+
+#footer_branding {
+    @apply hidden;
+}
+
+nav.footer-nav {
+    .lang {
+        > div {
+            @apply !w-auto !bg-transparent;
+        }
+        li.wpml-ls-current-language {
+            > a {
+                @apply !border-0;
+
+                &::after {
+                    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="13" height="13" stroke-width="1.5" stroke="#444444" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>');
+                    @apply border-0 w-[13px] h-[13px];
+                }
+            }
+
+            &:hover {
+                > a {
+                    @apply bg-transparent;
+                }
+            }
+        }
+    }
+}
+
+
+.site-footer {
+    ul.footer-bottom-menu > li:last-child {
+        @apply border-r-0;
+
+        a {
+            @apply pointer-events-none;
+        }
+    }
+}
+
+.group:hover {
+    .image > a::after {
+        @apply h-full;
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

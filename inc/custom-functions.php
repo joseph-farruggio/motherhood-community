@@ -60,17 +60,19 @@ add_shortcode('product_card', '_product_card');
 function _product_card($atts)
 {
 
-	if (ICL_LANGUAGE_CODE == 'es') {
-		$atts = shortcode_atts(
-			array(
-				'spanish_product_id'      => 0,
-				'affiliate_link_override' => '',
-			),
-			$atts,
-			'product_card'
-		);
+	if (defined('ICL_LANGUAGE_CODE')) {
+		if (ICL_LANGUAGE_CODE == 'es') {
+			$atts = shortcode_atts(
+				array(
+					'spanish_product_id'      => 0,
+					'affiliate_link_override' => '',
+				),
+				$atts,
+				'product_card'
+			);
 
-		$product_id = $atts['spanish_product_id'];
+			$product_id = $atts['spanish_product_id'];
+		}
 	} else {
 		$atts = shortcode_atts(
 			array(
@@ -182,7 +184,7 @@ add_shortcode('compare_product_cards', '_compare_product_card');
 function _compare_product_card($atts)
 {
 	// if constant is defined
-	if (defined(ICL_LANGUAGE_CODE)) {
+	if (defined('ICL_LANGUAGE_CODE')) {
 		if (ICL_LANGUAGE_CODE == 'es') {
 			$atts = shortcode_atts(
 				array(

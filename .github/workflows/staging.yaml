@@ -1,0 +1,35 @@
+name: Build and Publish Staging Theme
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Build Project
+        run: |
+          npm install --quiet
+          npm run prod
+
+      - name: List output files
+        run: ls
+
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE }}
+          REMOTE_HOST: 34.174.186.154
+          REMOTE_USER: motherhoodcommunityv2
+          REMOTE_PORT: 14140
+          ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
+          TARGET: /public/wp-content/themes/motherhoodcommunity

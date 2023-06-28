@@ -19,7 +19,7 @@ jobs:
       - name: Build Project
         run: |
           npm install --quiet
-          npm run prod
+          npm run production
 
       - name: List output files
         run: ls

@@ -20,7 +20,7 @@ if (!empty($block['className'])) {
 				<?php endwhile;
 			endif;
 		endif; ?>
-
+		<!-- test -->
 		<?php if (have_rows('add_logos_plb')): ?>
 			<ul class="snap-x flex flex-nowrap gap-4 items-center overflow-scroll no-scrollbar">
 

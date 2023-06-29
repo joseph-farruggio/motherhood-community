@@ -449,11 +449,11 @@ require_once get_stylesheet_directory() . '/inc/menu-builder.php';
 add_action('wp_footer', 'tailwind_screen_sizes');
 function tailwind_screen_sizes()
 { ?>
-	<div class="fixed bottom-4 left-0">
+	<!-- <div class="fixed bottom-4 left-0">
 		<div class="bg-black text-white p-4 sm:hidden">XS</div>
 		<div class="bg-black text-white p-4 hidden sm:block md:hidden">SM</div>
 		<div class="bg-black text-white p-4 hidden md:block lg:hidden">MD</div>
 		<div class="bg-black text-white p-4 hidden lg:block xl:hidden">LG</div>
 		<div class="bg-black text-white p-4 hidden xl:block">XL</div>
-	</div>
+	</div> -->
 <?php }

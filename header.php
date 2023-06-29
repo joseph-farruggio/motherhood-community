@@ -65,12 +65,12 @@
                     <!-- Logo / Left Outer Column -->
                     <div class="logo shrink-0 flex items-center gap-2">
                         <?php
-                        // $custom_logo_id = get_theme_mod('custom_logo');
-                        // $logo           = wp_get_attachment_image_src($custom_logo_id, 'full');
-                        // echo '<a href="' . esc_url(get_site_url()) . '" class="custom-logo-link shrink-0 m-0"><img loading="not_lazy" src="' . esc_url($logo[0]) . '" width="' . $logo[1] . '" height="' . $logo[2] . '" alt="' . get_bloginfo('name') . '" class="custom-logo h-16 sm:max-h-[75px] w-auto"></a>';
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo           = wp_get_attachment_image_src($custom_logo_id, 'full');
+                        echo '<a href="' . esc_url(get_site_url()) . '" class="custom-logo-link shrink-0 m-0"><img loading="not_lazy" src="' . esc_url($logo[0]) . '" width="' . $logo[1] . '" height="' . $logo[2] . '" alt="' . get_bloginfo('name') . '" class="custom-logo h-16 sm:max-h-[75px] w-auto"></a>';
                         ?>
-                        <div class="h-10 w-10 lg:h-14 lg:w-14 bg-[#B9AAAA] rounded-full"></div>
-                        <span class="font-g-medium text-base lg:text-xl text-[#413536]">Motherhood Community</span>
+                        <!-- <div class="h-10 w-10 lg:h-14 lg:w-14 bg-[#B9AAAA] rounded-full"></div>
+                        <span class="font-g-medium text-base lg:text-xl text-[#413536]">Motherhood Community</span> -->
                     </div>
 
                     <!-- Right Outer Column -->

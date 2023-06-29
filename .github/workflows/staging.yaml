@@ -32,4 +32,4 @@ jobs:
           REMOTE_USER: motherhoodcommunityv2
           REMOTE_PORT: 14140
           ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
-          TARGET: /public/wp-content/themes/motherhoodcommunity
+          TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity

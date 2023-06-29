@@ -70,7 +70,7 @@
                         echo '<a href="' . esc_url(get_site_url()) . '" class="custom-logo-link hidden sm:block shrink-0 m-0"><img loading="not_lazy" src="' . esc_url($logo[0]) . '" width="' . $logo[1] . '" height="' . $logo[2] . '" alt="' . get_bloginfo('name') . '" class="custom-logo h-16 sm:max-h-[75px] w-auto"></a>';
                         ?>
                         <a href="/" class="sm:hidden">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/mobile-logo.jpg" alt="Motherhood Logo" class="h-16">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/mobile-logo.jpg" alt="Motherhood Logo" class="h-16 w-auto">
                         </a>
                         <!-- <div class="h-10 w-10 lg:h-14 lg:w-14 bg-[#B9AAAA] rounded-full"></div>
                         <span class="font-g-medium text-base lg:text-xl text-[#413536]">Motherhood Community</span> -->

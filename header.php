@@ -80,7 +80,7 @@
                             <?php get_search_form(); ?>
                         </div>
 
-                        <a href="#subscribe" class="hidden sm:inline bg-[#B9AAAA]/25 hover:bg-[#B9AAAA]/40 transition-colors text-[#413536] px-4 py-2 rounded-md">Subscribe</a>
+                        <a href="/newsletter" class="hidden sm:inline bg-[#B9AAAA]/25 hover:bg-[#B9AAAA]/40 transition-colors text-[#413536] px-4 py-2 rounded-md">Subscribe</a>
 
                         <!-- Mobile Menu Toggle -->
                         <button @click="$store.menuOpen = !$store.menuOpen; activeMenu=null" class="lg:hidden">

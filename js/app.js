@@ -1,13 +1,6 @@
 (() => {
   // resources/js/app.js
   window.addEventListener("DOMContentLoaded", function() {
-    let main_navigation = document.querySelector("#primary-menu");
-    if (main_navigation) {
-      document.querySelector("#primary-menu-toggle").addEventListener("click", function(e) {
-        e.preventDefault();
-        main_navigation.classList.toggle("hidden");
-      });
-    }
     let transContent = document.querySelector("#fullTrans");
     if (typeof transContent != "undefined" && transContent != null) {
       let transBtn = document.querySelector("#transBtn");
@@ -56,86 +49,6 @@
         });
       });
     }
-    let header = document.getElementById("site-header");
-    if (typeof header != "undefined" && header != null) {
-      let headerHeight = header.height;
-      document.getElementById("content").style.margin = headerHeight + " 0 0 0";
-      let searchIcon = document.querySelectorAll(".search-form-icon");
-      let xIcon = document.querySelectorAll(".x-icon");
-      searchIcon.forEach((element) => {
-        element.addEventListener("click", function(e) {
-          e.preventDefault();
-          searchIcon.forEach((a) => {
-            a.classList.add("hidden");
-          });
-          xIcon.forEach((a) => {
-            a.classList.remove("hidden");
-          });
-          header.classList.remove("hide-form");
-        });
-      });
-      xIcon.forEach((element) => {
-        element.addEventListener("click", function(e) {
-          e.preventDefault();
-          xIcon.forEach((a) => {
-            a.classList.add("hidden");
-          });
-          searchIcon.forEach((a) => {
-            a.classList.remove("hidden");
-          });
-          header.classList.add("hide-form");
-        });
-      });
-    }
-    let partnersLogo = document.querySelector("#partners-logo");
-    if (typeof partnersLogo != "undefined" && partnersLogo != null) {
-      new Splide("#partners-logo", {
-        type: "loop",
-        perPage: 5,
-        perMove: 1,
-        autoplay: true,
-        arrows: false,
-        gap: "2em",
-        pagination: false,
-        breakpoints: {
-          640: {
-            perPage: 2
-          }
-        }
-      }).mount();
-    }
-    let grid3Posts = document.querySelector("#grid3-posts");
-    if (typeof grid3Posts != "undefined" && grid3Posts != null) {
-      new Splide("#grid3-posts", {
-        type: "slide",
-        perPage: 3,
-        perMove: 1,
-        arrows: false,
-        drag: true,
-        gap: "2rem",
-        breakpoints: {
-          1023: {
-            perPage: 2,
-            arrows: true
-          },
-          639: {
-            perPage: 1,
-            arrows: true
-          }
-        }
-      }).mount();
-    }
-    let featuredPosts = document.querySelector("#sidebar-featured-post");
-    if (typeof featuredPosts != "undefined" && featuredPosts != null) {
-      new Splide("#sidebar-featured-post", {
-        type: "slide",
-        perPage: 1,
-        perMove: 1,
-        autoplay: true,
-        arrows: false,
-        drag: true
-      }).mount();
-    }
     var filter_tags = document.getElementsByClassName("filter_tags");
     if (typeof filter_tags != "undefined" && filter_tags != null) {
       for (i = 0; i < filter_tags.length; i++) {
@@ -148,20 +61,6 @@
         alphabetSticky[i].style.top = document.getElementById("site-header").clientHeight + "px";
       }
     }
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        const el = document.getElementById(this.getAttribute("href").replace("#", ""));
-        additional_scroll = document.getElementById("site-header").clientHeight;
-        if (el.offsetTop < window.scrollY) {
-          additional_scroll += 100;
-        }
-        if (document.getElementsByTagName("body")[0].classList.contains("admin-bar")) {
-          additional_scroll += 32;
-        }
-        window.scrollTo({ top: el.offsetTop - additional_scroll, behavior: "smooth" });
-      });
-    });
   });
   function show_hide_filter_posts() {
     document.querySelectorAll(".filter_tags").forEach(function(el) {

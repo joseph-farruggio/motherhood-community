@@ -59,7 +59,7 @@
                 id="site-header"
                 x-data="{activeMenu: null, openMenu(id) { this.activeMenu = this.activeMenu === id ? null : setTimeout(() => { this.activeMenu = id }, 0) } }"
                 x-trap.noscroll="$store.menuOpen"
-                class="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-[9999999] py-4 space-y-6 <?= $header_class; ?>">
+                class="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-[10001] py-4 space-y-6 <?= $header_class; ?>">
 
                 <div class="relative z-20 mx-auto max-w-7xl flex gap-x-8  flex-nowrap justify-between items-center px-5">
                     <!-- Logo / Left Outer Column -->

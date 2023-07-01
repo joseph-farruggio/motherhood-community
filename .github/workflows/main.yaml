@@ -41,10 +41,10 @@ jobs:
     steps:
       - name: Make curl request
         run: |
-        curl -i -X POST \
-        https://api.kinsta.com/v2/sites/tools/clear-cache \
-        -H 'Authorization: Bearer ${{ secrets.KINSTA_API_KEY }}' \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "environment_id": "${{ KINSTA_SITE_ID }}"
-        }'
+          curl -i -X POST \
+          https://api.kinsta.com/v2/sites/tools/clear-cache \
+          -H 'Authorization: Bearer ${{ secrets.KINSTA_API_KEY }}' \
+          -H 'Content-Type: application/json' \
+          -d '{
+            "environment_id": "${{ KINSTA_SITE_ID }}"
+          }'

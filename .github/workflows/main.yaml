@@ -1,8 +1,8 @@
-name: Build and Publish Staging Theme
+name: Build and Publish Production Theme
 on:
   push:
     branches:
-      - staging
+      - main
 
 jobs:
   FTP-Deploy-Action:
@@ -30,6 +30,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE }}
           REMOTE_HOST: 34.174.186.154
           REMOTE_USER: motherhoodcommunityv2
-          REMOTE_PORT: 21157
+          REMOTE_PORT: 14140
           ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
           TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity

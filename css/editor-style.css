@@ -172,12 +172,24 @@
   left: 50%
 }
 
+.-top-4 {
+  top: -1rem
+}
+
+.-top-8 {
+  top: -2rem
+}
+
+.-right-5 {
+  right: -1.25rem
+}
+
 .z-\[1\] {
   z-index: 1
 }
 
-.z-\[99\] {
-  z-index: 99
+.z-\[10001\] {
+  z-index: 10001
 }
 
 .z-20 {
@@ -190,14 +202,6 @@
 
 .z-50 {
   z-index: 50
-}
-
-.z-\[10002\] {
-  z-index: 10002
-}
-
-.z-\[10001\] {
-  z-index: 10001
 }
 
 .m-8 {
@@ -370,6 +374,30 @@
 
 .\!mb-0 {
   margin-bottom: 0px !important
+}
+
+.ml-6 {
+  margin-left: 1.5rem
+}
+
+.ml-8 {
+  margin-left: 2rem
+}
+
+.ml-12 {
+  margin-left: 3rem
+}
+
+.mt-6 {
+  margin-top: 1.5rem
+}
+
+.-ml-2 {
+  margin-left: -0.5rem
+}
+
+.-ml-4 {
+  margin-left: -1rem
 }
 
 .block {
@@ -975,6 +1003,11 @@
   border-bottom-width: 1px
 }
 
+.border-x-0 {
+  border-left-width: 0px;
+  border-right-width: 0px
+}
+
 .border-b {
   border-bottom-width: 1px
 }
@@ -997,6 +1030,10 @@
 
 .border-b-2 {
   border-bottom-width: 2px
+}
+
+.border-t-0 {
+  border-top-width: 0px
 }
 
 .border-solid {
@@ -1061,6 +1098,11 @@
 .border-\[\#dddddd\] {
   --tw-border-opacity: 1;
   border-color: rgb(221 221 221 / var(--tw-border-opacity))
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity))
 }
 
 .bg-primary {
@@ -1138,6 +1180,20 @@
   background-color: rgb(40 190 215 / var(--tw-bg-opacity))
 }
 
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity))
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity))
+}
+
+.bg-transparent {
+  background-color: transparent
+}
+
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops))
 }
@@ -1150,6 +1206,10 @@
 
 .to-transparent {
   --tw-gradient-to: transparent
+}
+
+.fill-transparent {
+  fill: transparent
 }
 
 .object-contain {
@@ -1803,6 +1863,16 @@
   color: rgb(51 65 85 / var(--tw-text-opacity))
 }
 
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity))
+}
+
+.text-slate-50 {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity))
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline
@@ -2112,6 +2182,10 @@ body {
 
 .first\:mt-0:first-child {
   margin-top: 0px
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer
 }
 
 .hover\:\!border-\[\#28bed7\]:hover {

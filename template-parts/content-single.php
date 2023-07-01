@@ -4,7 +4,7 @@
         <h5 class="text-sm uppercase font-g-medium font-normal mb-2.5 tracking-widest">
             <?php the_category(' / '); ?>
         </h5>
-        <?php the_title('<h1 class="entry-title font-cg-medium text-3xl md:text-6xl text-[#161616] mb-4">', '</h1>'); ?>
+        <?php the_title('<h1 class="entry-title font-cg-medium text-3xl md:text-6xl text-[#161616] mt-2 mb-8">', '</h1>'); ?>
         <div class="meta flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-0 mb-9">
             <div>
                 <span class="uppercase text-xs text-[#1e353d]/[.37] block"><?php _e('Updated on ') ?><time><?php echo get_the_modified_date(); ?></time></span>

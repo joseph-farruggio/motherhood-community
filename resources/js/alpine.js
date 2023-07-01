@@ -31,6 +31,17 @@ Alpine.data('navigatorShare', (title, text, url) => ({
     }
 }))
 
+Alpine.data('featuredPosts', (data) => ({
+    posts: data,
+    active: 0,
+    prev() {
+        this.active = this.active == 0 ? this.posts.length - 1 : this.active - 1;
+    },
+    next() {
+        this.active = this.active < this.posts.length - 1 ? this.active + 1 : 0;
+    }
+}))
+
 
 Alpine.magic('clipboard', () => subject => {
     navigator.clipboard.writeText(subject)

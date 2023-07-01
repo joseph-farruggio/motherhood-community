@@ -1,5 +1,8 @@
 name: Build and Publish Production Theme
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main

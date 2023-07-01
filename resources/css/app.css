@@ -29,6 +29,10 @@
     }
 }
 
+.custom-logo-link img { 
+    @apply hidden sm:block shrink-0 m-0;
+}
+
 /* GForms */
 /* @import "formreset.min.css";
 @import "formsmain.min.css";

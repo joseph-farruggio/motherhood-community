@@ -67,7 +67,7 @@
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
                         $logo           = wp_get_attachment_image_src($custom_logo_id, 'full');
-                        echo '<a href="' . esc_url(get_site_url()) . '" class="custom-logo-link hidden sm:block shrink-0 m-0"><img loading="not_lazy" src="' . esc_url($logo[0]) . '" width="' . $logo[1] . '" height="' . $logo[2] . '" alt="' . get_bloginfo('name') . '" class="custom-logo h-16 sm:max-h-[75px] w-auto"></a>';
+                        echo '<a href="' . esc_url(get_site_url()) . '" class="custom-logo-link"><img loading="not_lazy" src="' . esc_url($logo[0]) . '" width="' . $logo[1] . '" height="' . $logo[2] . '" alt="' . get_bloginfo('name') . '" class="custom-logo h-16 sm:max-h-[75px] w-auto"></a>';
                         ?>
                         <a href="/" class="sm:hidden">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/mobile-logo.jpg" alt="Motherhood Logo" class="h-16 w-auto">

@@ -49,7 +49,7 @@
                     </button>
 
 
-                    <button @click="$clipboard('hello world'), active = true, setTimeout(() => { active = false}, 2000)" class="relative" x-data="{active: false}">
+                    <button @click="$clipboard('<?= get_the_permalink(); ?>'), active = true, setTimeout(() => { active = false}, 2000)" class="relative" x-data="{active: false}">
                         <svg width=" 30" height="31" viewBox="0 0 30 31" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.756 30.972C6.606 30.972 0 24.039 0 15.486S6.607 0 14.756 0c8.15 0 14.757 6.933 14.757 15.486s-6.607 15.486-14.757 15.486zm-1.5-17.631l3.052-3.053a2.347 2.347 0 0 1 3.32 0l.099.1a2.347 2.347 0 0 1 0 3.319l-3.052 3.052 1.328 1.328 3.052-3.052a4.225 4.225 0 0 0 0-5.976l-.099-.099a4.225 4.225 0 0 0-5.976 0l-3.052 3.053 1.328 1.328zm-1.421 1.42l-1.328-1.327-2.342 2.342a4.225 4.225 0 0 0 0 5.975l.099.1a4.225 4.225 0 0 0 5.976 0l2.341-2.342-1.328-1.328-2.341 2.341a2.347 2.347 0 0 1-3.32 0l-.1-.099a2.347 2.347 0 0 1 0-3.32l2.343-2.341zm5.298-3.228l-6.751 6.75 1.35 1.35 6.75-6.75-1.35-1.35z" fill="#1A2E3B" fill-rule="nonzero" />
                         </svg>

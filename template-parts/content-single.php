@@ -1,35 +1,19 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <header class="entry-header mb-4">
-        <h5 class="text-sm uppercase font-g-medium font-normal mb-2.5 tracking-widest">
+        <h5 class="text-sm uppercase font-g-medium font-normal mb-2.5 text-slate-600 tracking-widest">
             <?php the_category(' / '); ?>
         </h5>
-        <?php the_title('<h1 class="entry-title font-cg-medium text-3xl md:text-6xl text-[#161616] mt-2 mb-8">', '</h1>'); ?>
+        <?php the_title('<h1 class="entry-title font-cg-medium text-4xl md:text-6xl text-[#161616] mt-2 mb-4">', '</h1>'); ?>
         <div class="meta flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-0 mb-9">
-            <div>
-                <span class="uppercase text-xs text-[#1e353d]/[.37] block"><?php _e('Updated on ') ?><time><?php echo get_the_modified_date(); ?></time></span>
-                <span class="uppercase text-xs text-[#1e353d]/[.37] block"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></span>
+            <div class="flex items-center gap-2">
+                <span class="text-sm uppercase font-medium text-slate-600"><?php _e('Updated on ') ?><time><?php echo get_the_modified_date(); ?></time></span>
+                <div class="h-1 w-1 bg-slate-500 rounded-full"></div>
+                <span class="text-sm uppercase font-medium text-slate-600"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></span>
             </div>
             <?php if (!is_singular('podcasts')): ?>
                 <?php $urlToShare = urlencode(get_the_permalink()); ?>
-                <div
-                    x-data="navigatorShare(
-                    '<?= esc_attr(addslashes(get_the_title())); ?>', 
-                    '<?= esc_attr(addslashes(get_the_excerpt())); ?>',
-                    '<?= esc_url(get_the_permalink()); ?>')"
-
-                    class="lg:hidden">
-                    <button
-                        @click="shareThis()"
-                        class="mx-auto flex items-center gap-4 bg-transparent border-none p-1 hover:cursor-pointer">
-                        <span>Share this article</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-transparent">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="hidden lg:flex items-center gap-3" x-data="social()">
+                <div class=" hidden lg:flex items-center gap-3" x-data="social()">
                     <button @click="share('https://www.facebook.com/sharer.php?u=<?= $urlToShare; ?>')">
                         <svg width="30" height="31" viewBox="0 0 30 31" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.731 24.01v-8.787h-1.76V12.31h1.76V10.55c0-2.376.7-4.09 3.263-4.09h3.049v2.908h-2.147c-1.075 0-1.32.725-1.32 1.484v1.46h3.308l-.451 2.912h-2.857v8.787H12.73zM15 30.447c8.284 0 15-6.816 15-15.223C30 6.816 23.284 0 15 0 6.715 0 0 6.816 0 15.224c0 8.407 6.715 15.223 15 15.223z" fill="#1A2E3B" fill-rule="evenodd" />
@@ -62,10 +46,24 @@
 
     <?php
     if (has_post_thumbnail()) {
-        the_post_thumbnail('image-845x0', ['class' => 'featured-image mb-10 !max-w-full']);
+        the_post_thumbnail('image-845x0', ['class' => 'featured-image mb-6 !max-w-full']);
     }
     ?>
-
+    <div
+        x-data="navigatorShare(
+            '<?= esc_attr(addslashes(get_the_title())); ?>', 
+            '<?= esc_attr(addslashes(get_the_excerpt())); ?>',
+            '<?= esc_url(get_the_permalink()); ?>')"
+        class="lg:hidden">
+        <button
+            @click="shareThis()"
+            class="mx-auto flex items-center gap-4 bg-transparent border-none p-1 hover:cursor-pointer">
+            <span>Share this article</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-transparent">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+            </svg>
+        </button>
+    </div>
     <div class="entry-content">
         <?php
         the_content();

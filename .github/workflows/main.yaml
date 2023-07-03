@@ -36,10 +36,7 @@ jobs:
           REMOTE_PORT: 14140
           ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
           TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity-v2
-       # Runs a single command using the runners shell
-      - name: Webhook
-        uses: joelwmale/webhook-action@2.1.0
-          with:
-            url: "https://motherhoodcommunity.com/super-secret-cache-reset"
-            body: '{}'
-            headers: '{}'
+
+      - name: Hit Webhook Endpoint
+        run: |
+          curl -X POST https://motherhoodcommunity.com/super-secret-cache-reset

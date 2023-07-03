@@ -2,8 +2,8 @@
 function clear_cache_endpoint()
 {
     register_rest_route(
-        'my-plugin/v1',
-        '/my-endpoint',
+        'motherhoodcommunity',
+        '/clear-wp-rocket-cache',
         array(
             'methods'  => 'POST',
             'callback' => 'clear_cache',

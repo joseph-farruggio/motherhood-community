@@ -41,3 +41,4 @@ jobs:
         uses: distributhor/workflow-webhook
         with:
           url: "https://motherhoodcommunity.com/super-secret-cache-reset"
+          json: '{}'

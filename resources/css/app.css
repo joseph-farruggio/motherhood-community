@@ -30,7 +30,7 @@
 }
 
 .custom-logo-link img { 
-    @apply hidden sm:block shrink-0 m-0;
+    @apply hidden sm:block shrink-0 m-0 sm:max-h-[75px] w-auto;
 }
 
 /* GForms */

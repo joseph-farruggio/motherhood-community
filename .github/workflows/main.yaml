@@ -35,16 +35,9 @@ jobs:
           REMOTE_USER: motherhoodcommunityv2
           REMOTE_PORT: 14140
           ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
-          TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity
-  curl-request:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Make curl request
-        run: |
-          curl -i -X POST \
-          https://api.kinsta.com/v2/sites/tools/clear-cache \
-          -H 'Authorization: Bearer ${{ secrets.KINSTA_API_KEY }}' \
-          -H 'Content-Type: application/json' \
-          -d '{
-            "environment_id": "${{ KINSTA_SITE_ID }}"
-          }'
+          TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity-v2
+       # Runs a single command using the runners shell
+      - name: Webhook
+        uses: distributhor/workflow-webhook
+        with:
+          url: "https://motherhoodcommunity.com/super-secret-cache-reset"

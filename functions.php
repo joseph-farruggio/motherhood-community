@@ -445,6 +445,9 @@ function mhc22_add_to_head()
 
 require_once get_stylesheet_directory() . '/inc/menu-builder.php';
 
+// Clear cache endpoint
+require_once get_stylesheet_directory() . '/inc/clear-cache.php';
+
 // add to footer
 add_action('wp_footer', 'tailwind_screen_sizes');
 function tailwind_screen_sizes()

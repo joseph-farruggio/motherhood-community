@@ -37,6 +37,9 @@ jobs:
           ARGS: -rltgoDzvO --exclude .git --exclude .github --exclude node_modules
           TARGET: /www/motherhoodcommunityv2_167/public/wp-content/themes/motherhoodcommunity-v2
 
-      - name: Hit Webhook Endpoint
+      - name: Hit Kinsta Cache Webhook Endpoint
         run: |
           curl -X POST https://motherhoodcommunity.com/super-secret-cache-reset
+      - name: Hit WP Rocket Cache Webhook Endpoint
+        run: |
+          curl -X POST https://motherhoodcommunity.com/clear-wp-rocket-cache

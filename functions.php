@@ -76,18 +76,7 @@ function mhc22_enqueue_scripts()
 	wp_dequeue_style('jquery-ui-core');
 
 	wp_enqueue_style('mhc22', mhc22_asset('css/app.css'), array(), $theme->get('Version'));
-
-	// wp_enqueue_style('maxmegamenu', mhc22_asset('css/maxmegamenu.css'), array(), '1.0.0');
-	// wp_enqueue_style('formreset', mhc22_asset('css/formreset.min.css'), array(), '1.0.0');
-	// wp_enqueue_style('formsmain', mhc22_asset('css/formsmain.min.css'), array(), '1.0.0');
-	// wp_enqueue_style('readyclass', mhc22_asset('css/readyclass.min.css'), array(), '1.0.0');
-	// wp_enqueue_style('browsers', mhc22_asset('css/browsers.min.css'), array(), '1.0.0');
-
-
-	if (!is_single(12128)) {
-		wp_enqueue_script('splide', mhc22_asset('js/splide.min.js'), array(), '4.0.7', true);
-		wp_enqueue_style('splide', mhc22_asset('css/splide.min.css'), array(), $theme->get('Version'));
-	}
+	wp_enqueue_style('mhc22-fonts', mhc22_asset('css/fonts.css'), array(), $theme->get('Version'));
 
 	wp_enqueue_script('mhc22', mhc22_asset('js/app.js'), array(), $theme->get('Version', true));
 	wp_enqueue_script('alpine', mhc22_asset('js/alpine.min.js'), array(), $theme->get('Version', true));

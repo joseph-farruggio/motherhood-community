@@ -1,63 +1,3 @@
-@font-face {
-    font-family: 'GothamBook';
-    font-display: swap;
-    src: url('../fonts/GothamBook.eot');
-    src: url('../fonts/GothamBook.eot') format('embedded-opentype'),
-         url('../fonts/GothamBook.woff2') format('woff2'),
-         url('../fonts/GothamBook.woff') format('woff'),
-         url('../fonts/GothamBook.ttf') format('truetype'),
-         url('../fonts/GothamBook.svg#GothamBook') format('svg');
-}
-@font-face {
-    font-family: 'GothamBold';
-    font-display: swap;
-    src: url('../fonts/gotham-bold.eot');
-    src: url('../fonts/gotham-bold.eot') format('embedded-opentype'),
-         url('../fonts/gotham-bold.woff2') format('woff2'),
-         url('../fonts/gotham-bold.woff') format('woff'),
-         url('../fonts/gotham-bold.ttf') format('truetype'),
-         url('../fonts/gotham-bold.svg#GothamBold') format('svg');
-}
-@font-face {
-    font-family: 'GothamMedium';
-    font-display: swap;
-    src: url('../fonts/GothamMedium.eot');
-    src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
-         url('../fonts/GothamMedium.woff2') format('woff2'),
-         url('../fonts/GothamMedium.woff') format('woff'),
-         url('../fonts/GothamMedium.ttf') format('truetype'),
-         url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
-}
-@font-face {
-    font-family: 'GothamLight';
-    font-display: swap;
-    src: url('../fonts/GothamLight.eot');
-    src: url('../fonts/GothamLight.eot') format('embedded-opentype'),
-         url('../fonts/GothamLight.woff2') format('woff2'),
-         url('../fonts/GothamLight.woff') format('woff'),
-         url('../fonts/GothamLight.ttf') format('truetype'),
-         url('../fonts/GothamLight.svg#GothamLight') format('svg');
-}
-
-@font-face {
-    font-family: 'CormorantGaramondMedium';
-    font-display: swap;
-    src: url('../fonts/cormorantgaramond-medium-webfont.woff2');
-    src: url('../fonts/cormorantgaramond-medium-webfont.woff2') format('woff2'),
-         url('../fonts/cormorantgaramond-medium-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Avenir';
-    font-display: swap;
-    src: url('../fonts/Avenir.eot');
-    src: url('../fonts/Avenir.eot') format('embedded-opentype'),
-         url('../fonts/Avenir.woff2') format('woff2'),
-         url('../fonts/Avenir.woff') format('woff'),
-         url('../fonts/Avenir.ttf') format('ttf'),
-         url('../fonts/Avenir.svg') format('svg');
-}
-
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
@@ -100,32 +40,11 @@ iframe {
     @apply !max-w-full;
 }
 
-#site-header {
-    > #search-form {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        transition: transform 0.4s;
-    }
-
-    &.hide-form {
-        > #search-form {
-            transform: translate3d(0, -100%, 0);
-        }
-    }
-}
-
 ul.alphabet-sticky:before {
     content: 'Starts with: ';
     transform: translate(-100%, 3px);
     position: absolute;
     text-transform: none;
-}
-
-.scroll-down #site-header {
-    transform: translate3d(0, -100%, 0);
 }
 
 .scroll-up .alphabet-sticky {
@@ -136,23 +55,6 @@ ul.alphabet-sticky:before {
 }
 .alphabet-sticky.open-sidemenu {
     @apply translate-x-0;
-}
-
-#mega-menu-wrap-primary {
-    .mega-menu-toggle {
-        @apply absolute -top-[50px] left-0;
-    }
-    ul {
-        > li > a {
-            @apply !uppercase !font-g-book !text-xs !text-[#353535] !tracking-[1.57px];
-        }
-        > li.mega-menu-item-has-children > a {
-            @apply !text-sm	!font-bold;
-        }
-    }
-    > ul > li a {
-        @apply !text-sm	!font-bold;
-    }
 }
 
 article > *:not(.entry-content),
@@ -321,106 +223,6 @@ aside.sidebar {
     }
     .btn {
         @apply bg-secondary px-6 text-white border-2 border-secondary rounded-md text-base font-g-medium inline-block mx-auto;
-    }
-}
-
-.meta-share {
-    .addtoany_list.a2a_kit_size_32 a {
-        @apply h-[30px] sm:h-[42px] text-white relative font-g-book text-sm;
-    
-        &:not(.addtoany_special_service) > span {
-            @apply leading-[30px] sm:leading-[42px] h-[30px] sm:h-[42px] w-[85px] rounded-none;
-        }
-    
-        &:after {
-            content: '';
-            position: absolute;
-            left: 38px;
-            display: inline-block;
-            top: 50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            font-size: 13px;
-        }
-        &.a2a_button_facebook::after {
-            content: "Share";
-        }
-        &.a2a_button_twitter::after {
-            content: "Tweet";
-        }
-        &.a2a_button_pinterest::after {
-            content: "Pin It";
-        }
-        &.a2a_button_email {
-            &:after {
-                content: "Email";
-            }
-
-            > span.a2a_svg {
-                @apply !bg-[#767676];
-            }
-        }
-        &.a2a_button_sms {
-            &:after {
-                content: "Text";
-            }
-
-            > span.a2a_svg {
-                @apply !bg-[#bbbbbb];
-            }
-        }
-    
-        .a2a_svg svg {
-            width: 19px;
-            margin-left: 10px;
-            @apply h-[30px] sm:h-[42px];
-        }
-
-        &:nth-last-of-type(-n+2) {
-            @apply hidden sm:inline-block;
-        }
-    }
-}
-/* .addtoany_list.a2a_kit_size_32 a:not(.addtoany_special_service) > span {
-    height: 42px;
-    line-height: 42px;
-    width: 85px;
-    border-radius: 0;
-}
-.addtoany_list.a2a_kit_size_32 a:after {
-    content: "Share";
-    position: absolute;
-    left: 38px;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    font-size: 13px;
-}
-.addtoany_list.a2a_kit_size_32 .a2a_svg svg {
-    width: 19px;
-    height: 42px;
-    margin-left: 10px;
-} */
-
-.splide {
-
-    .splide__slide .block {
-        img {
-            @apply w-full;
-        }
-    }
-
-    .splide__pagination {
-        @apply relative py-[1.125rem] mt-[1.125rem] border-y border-[#eaeaea];
-
-        .splide__pagination__page {
-            @apply w-2.5 h-2.5;
-
-            &.is-active {
-                @apply bg-black w-2.5 h-2.5 scale-100;
-            }
-        }
     }
 }
 
@@ -611,45 +413,6 @@ form#gform_4 {
 .related-posts, .grid5-posts {
     .card img {
         @apply h-full md:h-auto object-cover md:w-auto w-full;
-    }
-}
-
-#footer_branding {
-    @apply hidden;
-}
-
-nav.footer-nav {
-    .lang {
-        > div {
-            @apply !w-auto !bg-transparent;
-        }
-        li.wpml-ls-current-language {
-            > a {
-                @apply !border-0;
-
-                &::after {
-                    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="13" height="13" stroke-width="1.5" stroke="#444444" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>');
-                    @apply border-0 w-[13px] h-[13px];
-                }
-            }
-
-            &:hover {
-                > a {
-                    @apply bg-transparent;
-                }
-            }
-        }
-    }
-}
-
-
-.site-footer {
-    ul.footer-bottom-menu > li:last-child {
-        @apply border-r-0;
-
-        a {
-            @apply pointer-events-none;
-        }
     }
 }
 

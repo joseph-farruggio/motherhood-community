@@ -1,3 +1,63 @@
+@font-face {
+    font-family: 'GothamBook';
+    font-display: swap;
+    src: url('../fonts/GothamBook.eot');
+    src: url('../fonts/GothamBook.eot') format('embedded-opentype'),
+         url('../fonts/GothamBook.woff2') format('woff2'),
+         url('../fonts/GothamBook.woff') format('woff'),
+         url('../fonts/GothamBook.ttf') format('truetype'),
+         url('../fonts/GothamBook.svg#GothamBook') format('svg');
+}
+@font-face {
+    font-family: 'GothamBold';
+    font-display: swap;
+    src: url('../fonts/gotham-bold.eot');
+    src: url('../fonts/gotham-bold.eot') format('embedded-opentype'),
+         url('../fonts/gotham-bold.woff2') format('woff2'),
+         url('../fonts/gotham-bold.woff') format('woff'),
+         url('../fonts/gotham-bold.ttf') format('truetype'),
+         url('../fonts/gotham-bold.svg#GothamBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamMedium';
+    font-display: swap;
+    src: url('../fonts/GothamMedium.eot');
+    src: url('../fonts/GothamMedium.eot') format('embedded-opentype'),
+         url('../fonts/GothamMedium.woff2') format('woff2'),
+         url('../fonts/GothamMedium.woff') format('woff'),
+         url('../fonts/GothamMedium.ttf') format('truetype'),
+         url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+}
+@font-face {
+    font-family: 'GothamLight';
+    font-display: swap;
+    src: url('../fonts/GothamLight.eot');
+    src: url('../fonts/GothamLight.eot') format('embedded-opentype'),
+         url('../fonts/GothamLight.woff2') format('woff2'),
+         url('../fonts/GothamLight.woff') format('woff'),
+         url('../fonts/GothamLight.ttf') format('truetype'),
+         url('../fonts/GothamLight.svg#GothamLight') format('svg');
+}
+
+@font-face {
+    font-family: 'CormorantGaramondMedium';
+    font-display: swap;
+    src: url('../fonts/cormorantgaramond-medium-webfont.woff2');
+    src: url('../fonts/cormorantgaramond-medium-webfont.woff2') format('woff2'),
+         url('../fonts/cormorantgaramond-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-display: swap;
+    src: url('../fonts/Avenir.eot');
+    src: url('../fonts/Avenir.eot') format('embedded-opentype'),
+         url('../fonts/Avenir.woff2') format('woff2'),
+         url('../fonts/Avenir.woff') format('woff'),
+         url('../fonts/Avenir.ttf') format('ttf'),
+         url('../fonts/Avenir.svg') format('svg');
+}
+
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);

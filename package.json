@@ -16,6 +16,7 @@
 		"production:css-editor": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/editor-style.css -o ./css/editor-style.css --postcss --minify",
 		"production:js": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/app.js --bundle --outfile=./js/app.js --minify",
 		"production:alpine": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/alpine.js --bundle --outfile=./js/alpine.min.js --minify",
+		"dev:css-fonts": "cross-env NODE_ENV=development npx postcss ./resources/css/fonts.css -o ./css/fonts.css --use autoprefixer cssnano",
 		"dev:css-app": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/app.css -o ./css/app.css --postcss",
 		"dev:css-editor": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/editor-style.css -o ./css/editor-style.css --postcss",
 		"dev:js": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/app.js --bundle --outfile=./js/app.js",

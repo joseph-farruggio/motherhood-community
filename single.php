@@ -4,8 +4,9 @@ bt_set_post_views(get_the_ID()); ?>
 
 <div class="xl:container mx-auto mt-8 lg:mt-14 mb-8 px-4">
 
+	<!-- [@media(min-width:1270px)]:flex-row -->
 	<div class="flex justify-center flex-col lg:flex-row gap-x-16">
-		<div class="max-w-3xl w-full">
+		<div class="max-w-3xl w-full shrink">
 
 			<?php
 			if (have_posts()):
@@ -24,7 +25,7 @@ bt_set_post_views(get_the_ID()); ?>
 
 		</div>
 
-		<div class="lg:w-[24rem] w-full mb-5 lg:mb-0">
+		<div class="lg:w-[24rem] max-w-full w-full mb-5 lg:mb-0">
 			<?php
 			if (!is_singular('podcasts')) {
 				get_sidebar('single');

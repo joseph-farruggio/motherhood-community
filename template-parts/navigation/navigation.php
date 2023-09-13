@@ -8,7 +8,7 @@ $top_level_menu_item_class = 'py-2 px-3 rounded-md text-base leading-6 text-gray
         'relative hidden lg:flex': !$store.menuOpen,
         'rounded-b-none': activeMenu !== null
     }"
-    class="space-y-4 overflow-scroll [&>*:first-child]:mt-6 w-full max-w-7xl hidden px-2 lg:flex lg:space-y-0 lg:flex-row lg:flex-wrap lg:gap-x-4 lg:items-center lg:mx-auto lg:rounded-lg">
+    class="space-y-4 overflow-scroll lg:overflow-visible [&>*:first-child]:mt-6 w-full max-w-7xl hidden px-2 lg:flex lg:space-y-0 lg:flex-row lg:flex-wrap lg:gap-x-4 lg:items-center lg:mx-auto lg:rounded-lg">
 
     <!-- Mobile Social Icons -->
     <div class="flex items-center justify-center gap-8 my-6 lg:hidden">

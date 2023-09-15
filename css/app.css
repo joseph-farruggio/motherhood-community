@@ -740,11 +740,6 @@ video {
   margin-bottom: 1.3em;
 }
 
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .\!my-0 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -1279,6 +1274,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-0 {
   gap: 0px;
 }
@@ -1293,10 +1292,6 @@ video {
 
 .gap-40 {
   gap: 10rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-x-8 {
@@ -1564,8 +1559,8 @@ video {
   background-color: rgb(185 170 170 / 0.25);
 }
 
-.bg-\[\#B9AAAA\]\/20 {
-  background-color: rgb(185 170 170 / 0.2);
+.bg-\[\#B9AAAA\]\/10 {
+  background-color: rgb(185 170 170 / 0.1);
 }
 
 .bg-\[\#413536\]\/5 {
@@ -1617,14 +1612,6 @@ video {
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(40 190 215 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#B9AAAA\]\/10 {
-  background-color: rgb(185 170 170 / 0.1);
-}
-
-.bg-\[\#B9AAAA\]\/5 {
-  background-color: rgb(185 170 170 / 0.05);
 }
 
 .bg-gradient-to-t {

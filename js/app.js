@@ -1,1 +1,96 @@
-(()=>{window.addEventListener("DOMContentLoaded",function(){let e=document.querySelector("#fullTrans");if(typeof e!="undefined"&&e!=null){let t=document.querySelector("#transBtn");t.addEventListener("click",function(n){n.preventDefault(),e.classList.contains("hidden")?(e.classList.remove("hidden"),t.innerHTML="Back to summary"):(e.classList.add("hidden"),t.innerHTML="Read full transcript")})}let a=document.querySelector(".alphabet-sticky");typeof a!="undefined"&&a!=null&&document.querySelector(".alphabet-sticky-toggle > a").addEventListener("click",function(t){t.preventDefault(),a.classList.toggle("open-sidemenu")});let l=document.querySelector("#ez-toc-container");typeof l!="undefined"&&l!=null&&(l.classList.contains("menu")||l.classList.add("menu"));let s=document.querySelectorAll(".sidebar .widget_block");typeof s!="undefined"&&s!=null&&s.forEach(t=>{let n=t.querySelector(".widgettitle");n.addEventListener("click",function(r){r.preventDefault(),n.parentElement.classList.toggle("active")})});let d=document.querySelectorAll(".accordion .accordion-item");typeof d!="undefined"&&d!=null&&d.forEach(t=>{t.querySelector(".accordion-button").addEventListener("click",function(r){r.preventDefault();let u=this.getAttribute("data-bs-target");document.querySelector(u).classList.toggle("hidden")})});var c=document.getElementsByClassName("filter_tags");if(typeof c!="undefined"&&c!=null)for(i=0;i<c.length;i++)c[i].addEventListener("click",f);var o=document.getElementsByClassName("alphabet-sticky");if(typeof o!="undefined"&&o!=null)for(i=0;i<o.length;i++)o[i].style.top=document.getElementById("site-header").clientHeight+"px"});function f(){document.querySelectorAll(".filter_tags").forEach(function(e){e.classList.remove("active")}),this.classList.add("active"),this.dataset.tag_name!=""?(tagname=this.dataset.tag_name,document.querySelectorAll(".tags_posts").forEach(function(e){e.classList.add("hidden-anm")}),setTimeout(function(){console.log(tagname),document.querySelectorAll(".tags_posts").forEach(function(e){e.classList.add("hidden")}),document.querySelectorAll("."+tagname).forEach(function(e){e.classList.remove("hidden")})},500),setTimeout(function(){document.querySelectorAll("."+tagname).forEach(function(e){e.classList.remove("hidden-anm")})},600)):document.querySelectorAll(".tags_posts").forEach(function(e){e.classList.remove("hidden-anm"),e.classList.remove("hidden")})}})();
+(() => {
+  // resources/js/app.js
+  window.addEventListener("DOMContentLoaded", function() {
+    let transContent = document.querySelector("#fullTrans");
+    if (typeof transContent != "undefined" && transContent != null) {
+      let transBtn = document.querySelector("#transBtn");
+      transBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        if (transContent.classList.contains("hidden")) {
+          transContent.classList.remove("hidden");
+          transBtn.innerHTML = "Back to summary";
+        } else {
+          transContent.classList.add("hidden");
+          transBtn.innerHTML = "Read full transcript";
+        }
+      });
+    }
+    let alphabet_sticky = document.querySelector(".alphabet-sticky");
+    if (typeof alphabet_sticky != "undefined" && alphabet_sticky != null) {
+      document.querySelector(".alphabet-sticky-toggle > a").addEventListener("click", function(e) {
+        e.preventDefault();
+        alphabet_sticky.classList.toggle("open-sidemenu");
+      });
+    }
+    let tocHeading = document.querySelector("#ez-toc-container");
+    if (typeof tocHeading != "undefined" && tocHeading != null) {
+      if (!tocHeading.classList.contains("menu")) {
+        tocHeading.classList.add("menu");
+      }
+    }
+    let widgetblock = document.querySelectorAll(".sidebar .widget_block");
+    if (typeof widgetblock != "undefined" && widgetblock != null) {
+      widgetblock.forEach((element) => {
+        let widgettitle = element.querySelector(".widgettitle");
+        widgettitle.addEventListener("click", function(e) {
+          e.preventDefault();
+          widgettitle.parentElement.classList.toggle("active");
+        });
+      });
+    }
+    let pAccordion = document.querySelectorAll(".accordion .accordion-item");
+    if (typeof pAccordion != "undefined" && pAccordion != null) {
+      pAccordion.forEach((element) => {
+        let accordTitle = element.querySelector(".accordion-button");
+        accordTitle.addEventListener("click", function(e) {
+          e.preventDefault();
+          let divColp = this.getAttribute("data-bs-target");
+          document.querySelector(divColp).classList.toggle("hidden");
+        });
+      });
+    }
+    var filter_tags = document.getElementsByClassName("filter_tags");
+    if (typeof filter_tags != "undefined" && filter_tags != null) {
+      for (i = 0; i < filter_tags.length; i++) {
+        filter_tags[i].addEventListener("click", show_hide_filter_posts);
+      }
+    }
+    var alphabetSticky = document.getElementsByClassName("alphabet-sticky");
+    if (typeof alphabetSticky != "undefined" && alphabetSticky != null) {
+      for (i = 0; i < alphabetSticky.length; i++) {
+        alphabetSticky[i].style.top = document.getElementById("site-header").clientHeight + "px";
+      }
+    }
+  });
+  function show_hide_filter_posts() {
+    document.querySelectorAll(".filter_tags").forEach(function(el) {
+      el.classList.remove("active");
+    });
+    this.classList.add("active");
+    if (this.dataset.tag_name != "") {
+      tagname = this.dataset.tag_name;
+      document.querySelectorAll(".tags_posts").forEach(function(el) {
+        el.classList.add("hidden-anm");
+      });
+      setTimeout(function() {
+        console.log(tagname);
+        document.querySelectorAll(".tags_posts").forEach(function(el) {
+          el.classList.add("hidden");
+        });
+        document.querySelectorAll("." + tagname).forEach(function(el) {
+          el.classList.remove("hidden");
+        });
+      }, 500);
+      setTimeout(function() {
+        document.querySelectorAll("." + tagname).forEach(function(el) {
+          el.classList.remove("hidden-anm");
+        });
+      }, 600);
+    } else {
+      document.querySelectorAll(".tags_posts").forEach(function(el) {
+        el.classList.remove("hidden-anm");
+        el.classList.remove("hidden");
+      });
+    }
+  }
+})();

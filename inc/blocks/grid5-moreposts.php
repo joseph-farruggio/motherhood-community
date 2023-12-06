@@ -57,7 +57,7 @@ if( !empty($block['className']) ) {
 					<h2 class="text-lg leading-[1.125rem] font-cg-medium font-medium -tracking-[.015rem] mb-4 sm:mb-10">
 						<a href="<?php the_permalink(); ?>" class="text-primary hover:text-secondary block"><?php the_title(); ?></a>
 					</h2>
-					<h6 class="uppercase font-g-medium text-xs text-[#1e353d]/[.37]"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></h6>
+					
 				</div>
 			</div>
             <?php $x++; endwhile; wp_reset_postdata(); ?>

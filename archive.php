@@ -70,9 +70,7 @@ $tags = get_category_tags(['categories' => $term_id]);
                         <a href="<?php the_permalink(); ?>" class="text-primary hover:text-secondary block"><?php the_title(); ?></a>
                     </h2>
                     <p class="text-sm font-g-light text-[#353535] mb-4"><?php echo wp_trim_words( strip_shortcodes( get_the_content() ), 20, '...' );?></p>
-                    <h6 class="uppercase font-g-medium text-xs text-[#1e353d]/[.37]">
-                        <?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?>
-                    </h6>
+                    
                 </div>
             </div>
             <?php endforeach; wp_reset_postdata(); ?>
@@ -146,7 +144,7 @@ $tags = get_category_tags(['categories' => $term_id]);
 						<a href="<?php the_permalink(); ?>" class="text-primary hover:text-secondary block"><?php the_title(); ?></a>
 					</h2>
                     <p class="text-sm font-g-light text-[#353535] mb-4"><?php echo wp_trim_words( strip_shortcodes( get_the_content() ), 20, '...' );?></p>
-					<h6 class="uppercase font-g-medium text-xs text-[#1e353d]/[.37]"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></h6>
+					
 				</div>
 			</div>
             <?php

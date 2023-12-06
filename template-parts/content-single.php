@@ -9,7 +9,7 @@
             <div class="flex items-center gap-2">
                 <span class="text-sm uppercase font-medium text-slate-600"><?php _e('Updated on ') ?><time><?php echo get_the_modified_date(); ?></time></span>
                 <div class="h-1 w-1 bg-slate-500 rounded-full"></div>
-                <span class="text-sm uppercase font-medium text-slate-600"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></span>
+                
             </div>
             <?php if (!is_singular('podcasts')): ?>
                 <?php $urlToShare = urlencode(get_the_permalink()); ?>

@@ -31,7 +31,7 @@ get_header(); ?>
 						<h2 class="text-[2rem] leading-[2rem] md:text-5xl font-avenir font-medium tracking-tighter mb-4">
 							<a href="<?php the_permalink(); ?>" class="text-secondary block underline"><?php the_title(); ?></a>
 						</h2>
-                        <h6 class="uppercase font-g-medium text-xs text-[#1e353d]/[.37]"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></h6>
+                        
                     </div>
                 </article>
                 <?php

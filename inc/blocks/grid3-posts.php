@@ -62,7 +62,7 @@ if (!empty($block['className'])) {
 											<h2 class="text-[2rem] leading-[2rem] font-cg-medium font-medium tracking-tighter mb-10">
 												<a href="<?php the_permalink(); ?>" class="text-primary hover:text-secondary block"><?php the_title(); ?></a>
 											</h2>
-											<h6 class="uppercase font-g-medium text-xs text-[#1e353d]/[.37]"><?php echo do_shortcode('[rt_reading_time label="" postfix="minute read"]'); ?></h6>
+											
 										</div>
 									</div>
 								</li>
